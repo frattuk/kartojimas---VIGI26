@@ -1,1 +1,0 @@
-# kartojimas---VIGI26

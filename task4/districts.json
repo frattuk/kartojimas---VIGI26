@@ -1,0 +1,18 @@
+[
+  {
+    "district": "Vilniaus",
+    "cities": ["Vilnius", "Trakai", "Elektrėnai", "Šalčininkai"]
+  },
+  {
+    "district": "Kauno",
+    "cities": ["Kaunas", "Kėdainiai", "Jonava", "Kaišiadorys"]
+  },
+  {
+    "district": "Klaipėdos",
+    "cities": ["Klaipėda", "Kretinga", "Skuodas", "Šilutė"]
+  },
+  {
+    "district": "Panevėžio",
+    "cities": ["Panevėžys", "Pasvalys", "Biržai", "Rokiškis"]
+  }
+]
