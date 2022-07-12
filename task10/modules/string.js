@@ -1,8 +1,20 @@
 // stringUppercase, stringLowerCase
 
-function stringUppercase(string) {
-  const renderString = document.createElement("h1");
-  renderString.textContent = "Uzduotis";
-  element.prepend(string);
+// mano neveikia:
+
+// function stringUpperCase(string) {
+//   const renderString = document.createElement("h1");
+//   renderString.textContent = "Uzduotis";
+//   element.prepend(string);
+// }
+// export default stringUpperCase(string);
+
+// Roko kodas:
+
+export function upperCase(string) {
+  return string.toUpperCase();
 }
-export default stringUppercase;
+
+export function lowerCase(string) {
+  return string.toLowerCase();
+}

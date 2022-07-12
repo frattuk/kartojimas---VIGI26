@@ -1,7 +1,7 @@
-function showObjectValues(object) {
+export function showObjectValues(object) {
   return Object.values(object);
 }
 
-function showObjectKeys(object) {
+export function showObjectKeys(object) {
   return Object.keys(object);
 }
