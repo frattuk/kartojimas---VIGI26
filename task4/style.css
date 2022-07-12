@@ -38,3 +38,19 @@ button {
 button:hover {
   background-color: grey;
 }
+#output {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 24px;
+}
+
+.card {
+  width: 49%;
+  min-height: 200px;
+  background-color: lightblue;
+  margin-bottom: 20px;
+  padding: 16px;
+  padding-left: 32px;
+}

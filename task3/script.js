@@ -11,28 +11,35 @@ Parašykite JS kodą, kuris atvaizduos TODOS korteles.
 
 const ENDPOINT = "https://gorest.co.in/public/v2/todos";
 
-const renderCard = (user) => {
-  const { title, status, due_on } = user;
+const renderCard = (todo) => {
+  const { title, status, due_on } = todo;
   const card = document.createElement("div");
   const output = document.getElementById("output");
-  const titleEl = document.createElement("p");
-  const dueonEl = document.createElement("p");
+  const titleEl = document.createElement("h3");
+  const dueonEl = document.createElement("span");
   const statusEl = document.createElement("h5");
 
   card.className = "card";
 
   titleEl.textContent = title;
-  dueonEl.textContent = due_on;
+  dueonEl.textContent = new Date(due_on).toLocaleDateString();
   statusEl.textContent = status;
 
   card.append(titleEl, dueonEl, statusEl);
+  // card.style.padding = "8px";
+  if (status === "pending") {
+    card.style.backgroundColor = "orange";
+  } else {
+    card.style.backgroundColor = "green";
+  }
+
   output.append(card);
 };
 
 fetch("https://gorest.co.in/public/v2/todos")
   .then((resp) => resp.json())
   .then((response) => {
-    response.forEach((user) => renderCard(user));
+    response.forEach((todo) => renderCard(todo));
   })
   .catch((error) => {
     console.error(error, ": failed to load");
